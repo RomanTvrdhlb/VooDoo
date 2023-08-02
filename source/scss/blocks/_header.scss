@@ -1,0 +1,30 @@
+.header {
+  background-color: transparent;
+  padding: clamp(25px, 3.609vw, 48px) 0;
+  position: relative;
+  margin-bottom: clamp(60px, 7.519vw, 100px);
+
+  &::before{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(var(--bg-b),1.0);
+    height: 1px;
+  }
+ 
+
+
+  &-box{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: clamp(25px, 3.609vw, 48px);
+    align-items: start;
+  }
+
+  .order-button{
+    justify-self: end;
+    padding: 7px 0;
+  }
+}

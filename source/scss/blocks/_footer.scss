@@ -1,0 +1,30 @@
+footer {
+  background-color: transparent;
+  padding: clamp(50px, 6.604vw, 84px) 0;
+  position: relative;
+
+  &::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(var(--bg-b),1.0);
+    height: 1px;
+  }
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 23px;
+
+
+
+
+
+  &__logo {
+   padding: 8px 0;
+   justify-self: center;
+  }
+}

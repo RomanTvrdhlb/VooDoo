@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="En">
+@include('partials/head.html')
+
+<body>
+  @include('partials/header.html')
+
+  <main>
+
+    <section class="main-section">
+      <div class="container">
+        <div class="main-section__box">
+            <div class='main-section__inner' data-accordion-init data-default="1">
+              <div class="main-top">
+                <span class="main-top__title">
+                  <svg width='24' height='24'>
+                    <use href='img/sprite/sprite.svg#alert'></use>
+                  </svg>
+                  ALPHA
+                </span>
+                <p class="main-top__deskr">Important info regarding our service</p>
+                <button class='main-top__btn' data-id='1'>
+                    <svg width='24' height='24'>
+                      <use href='img/sprite/sprite.svg#arrow'></use>
+                     </svg>
+                 </button>
+              </div>
+          
+              <div class='main-section__inner' data-content='1'>
+                <ul class="main-list">
+                  <li class="main-list__item">
+                    <div class="main-card">
+                     
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              
+            </div>
+
+            <ul class="page-nav">
+              <li class="page-nav__item">
+                <a href="#" class="page-nav__link active">1</a>
+              </li> 
+              <li class="page-nav__item">
+                <a href="#" class="page-nav__link">2</a>
+              </li> 
+              <li class="page-nav__item">
+                <a href="#" class="page-nav__link">3</a>
+              </li> 
+              <li class="page-nav__item">
+                <a href="#" class="page-nav__link">4</a>
+              </li> 
+              <li class="page-nav__item">
+                <a href="#" class="page-nav__link">5</a>
+              </li> 
+              <li class="page-nav__item">
+                <a href="#" class="page-nav__link">...</a>
+              </li> 
+              <li class="page-nav__item">
+                <a href="#" class="page-nav__link">25</a>
+              </li> 
+            </ul>
+            </div>
+      
+      </div>
+    </section>
+  </main>
+
+  @include('partials/footer.html')
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>

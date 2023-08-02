@@ -1,0 +1,22 @@
+<header class="header fixed-block">
+
+    <div class="container container--mode">
+      <div class="header-box">
+            @include('../partials/components/header-logo.html',{
+              'ClassName':'header__logo',
+              'Link':'index.html',
+              'IconName':'logo',
+              'IconWidth':'249',
+              'IconHeight':'97'
+            })
+            
+
+           <button class="order-button">
+            <svg width='24' height='24'>
+              <use href='img/sprite/sprite.svg#order'></use>
+            </svg>
+           </button>
+           <button class="sign-button">Sign-up</button>
+      </div>
+    </div>
+</header>

@@ -1,0 +1,22 @@
+.nav-list{
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(10px, 1.494vw, 19px);
+
+
+    &__link{
+        color: rgba(var(--cl-b),1.0);
+        leading-trim: both;
+        text-edge: cap;
+        font-family: var(--font-family3);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        transition: all .4s;
+
+        &:hover{
+            color: rgba(var(--cl-e),0.8);
+        }
+    }
+}

@@ -1,0 +1,34 @@
+@mixin font-face($font-family, $url, $weight, $style) {
+  @font-face {
+    font-style: $style;
+    font-weight: #{$weight};
+    font-family: "#{$font-family}";
+
+    font-display: swap;
+    src: url("../fonts/#{$url}.woff2") format("woff2"),
+    url("../fonts/#{$url}.woff") format("woff");
+  }
+}
+
+@include font-face("SpaceGrotesk", "SpaceGrotesk-Regular", 400, normal);
+@include font-face("SpaceGrotesk", "SpaceGrotesk-Medium", 500, normal);
+@include font-face("SpaceGrotesk", "SpaceGrotesk-Bold", 700, normal);
+
+@include font-face("Inter", "Inter-Light", 300, normal);
+@include font-face("Inter", "Inter-Bold", 700, normal);
+
+@include font-face("SpaceMono", "SpaceMono-Bold", 700, normal);
+
+
+
+
+
+// 100 – Thin || Hairline
+// 200 – Extra Light || Ultra Light || Thin
+// 300 – Light
+// 400 – Normal || Regular
+// 500 – Medium
+// 600 – Semi Bold || Demi Bold
+// 700 – Bold
+// 800 – Extra Bold || Ultra Bold || Heavy
+// 900 – Black || Heavy

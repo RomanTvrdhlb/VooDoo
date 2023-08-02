@@ -1,0 +1,56 @@
+@mixin overlay {
+  position: fixed;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 0;
+
+  z-index: 85;
+  padding: 20px 20px;
+  overflow-y: scroll;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-rows: 1fr;
+
+  visibility: hidden;
+  opacity: 0;
+  background: rgba(var(--bg-b), 0.36);
+  transition: all 0.6s;
+  transition-delay: 0.5s;
+
+  pointer-events: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &.none {
+    display: none !important;
+  }
+
+  &.active {
+    position: fixed;
+   
+    visibility: visible;
+    opacity: 1;
+
+    transition: all 0.6s;
+
+    pointer-events: initial;
+
+    &--mode {
+      position: fixed;
+
+      visibility: visible;
+      opacity: 1;
+
+      transition: all 0.6s;
+
+      pointer-events: initial;
+      z-index: 50;
+    }
+  }
+}

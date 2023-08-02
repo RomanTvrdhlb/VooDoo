@@ -1,0 +1,14 @@
+<!-- @include('../partials/components/header-logo.html',{
+  'ClassName':'roma',
+  'Link':'index.html',
+  'IconName':'header-logo',
+  'IconWidth':'226',
+  'IconHeight':'39'
+}) -->
+
+
+<a href="@Link" class="header-logo @ClassName">
+  <svg width='@IconWidth' height='@IconHeight'>
+    <use href='img/sprite/sprite.svg#@IconName'></use>
+  </svg>
+</a>

@@ -1,0 +1,57 @@
+.main-card{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 12px;
+    min-height: 402px;
+
+    &__top{
+        min-height: 300px;
+        border-radius: 4px;
+        border: 1px solid var(--black, #000);
+    }
+
+    &__item{
+        display: flex;
+        flex-direction: column;
+
+        &:nth-child(even){
+            align-items: flex-end;
+        }
+    }
+
+    &__list{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title{
+        color: var(--black, #000);
+        font-family: var(--font-family);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    &__price{
+        color: var(--black, #000);
+        font-family: var(--font-family);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    &__name{
+        color: var(--black, #000);
+        font-family: var(--font-family);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        &--mode{
+            font-weight: 500;
+        }
+    }
+}

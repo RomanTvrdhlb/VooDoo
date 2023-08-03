@@ -204,13 +204,22 @@ if (asideMenu) {
 const productListContainer = document.querySelector('.main-list');
 const navPages = document.querySelector(".page-nav");
 const productPerPage = '24';
-function displayPaginaton(products) {
-  let productOnPages = [];
-  const countPages = Math.ceil(products.length / productPerPage);
-  let productOnPage;
+let productOnPages = [];
+async function fetchProducts(page) {
+  const url = `https://voodoo-sandbox.myshopify.com/products.json?`;
+  const response = await fetch(url);
+  const data = await response.json();
+  return data.products;
+}
+function sliceProducts(allProducts, productOnPages) {
+  const countPages = Math.ceil(allProducts.length / productPerPage);
   for (let i = 0; i < countPages; i++) {
-    productOnPages[i] = products.slice(i * productPerPage, i * productPerPage + productPerPage);
+    productOnPages[i] = allProducts.slice(i * productPerPage, i * productPerPage + productPerPage);
   }
+  return productOnPages;
+}
+function displayPaginaton(productOnPages) {
+  let productOnPage;
   productOnPages.forEach(function (productOnPage, index) {
     pageItem = document.createElement('li');
     pageItem.className = 'page-nav__item';
@@ -222,15 +231,10 @@ function displayPaginaton(products) {
     pageBtn.setAttribute('data-id', index);
     const page = pageBtn.dataset.id;
     pageBtn.addEventListener('click', function (e) {
+      e.preventDefault();
       displayProducts(productOnPage);
     });
   });
-}
-async function fetchProducts(page) {
-  const url = `https://voodoo-sandbox.myshopify.com/products.json?`;
-  const response = await fetch(url);
-  const data = await response.json();
-  return data.products;
 }
 function displayProducts(products) {
   productListContainer.innerHTML = '';
@@ -264,8 +268,9 @@ function displayProducts(products) {
 }
 async function loadInitialProducts() {
   const products = await fetchProducts();
-  displayProducts(products);
-  displayPaginaton(products);
+  sliceProducts(products, productOnPages);
+  displayPaginaton(productOnPages);
+  displayProducts(productOnPages[0]);
 }
 loadInitialProducts();
 

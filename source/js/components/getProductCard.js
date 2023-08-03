@@ -1,23 +1,38 @@
 const productListContainer = document.querySelector('.main-list');
+const navPages = document.querySelector(".page-nav");
 const productPerPage = '24';
 
-// function displayPaginaton(allProducts,page) {
+function displayPaginaton(products) {
+    let productOnPages = [];
+    const countPages = Math.ceil(products.length / productPerPage);
+    let productOnPage;
 
-//     const countPages = Math.ceil(allProducts / productPerPage);
+    for (let i = 0; i < countPages; i++){
+        productOnPages[i] = products.slice((i*productPerPage), (i*productPerPage) + productPerPage);
+    }
+   
+    productOnPages.forEach(function(productOnPage, index){
+        pageItem = document.createElement('li');
+        pageItem.className = ('page-nav__item');
+        pageBtn = document.createElement('a');
+        pageBtn.className = ('page-nav__link');
+        pageBtn.innerHTML = ++index;
+        pageItem.appendChild(pageBtn);
+        navPages.appendChild(pageItem);
+    
+        pageBtn.setAttribute('data-id', index);
+        const page = pageBtn.dataset.id;
 
-//     const navBtn = document.querySelector(".page-nav");
-//     let page = "";
-
-//     for (const i = 0; i < countPages; i++) {
-//     page += "<span class='page-nav__link'>" + (i + 1) + "</span>";
-//     }
-
-//     navBtn.innerHTML = page;
-// }
+        
+        pageBtn.addEventListener('click', function(e){
+            displayProducts(productOnPage);
+        })
+    })
+}
 
 
 async function fetchProducts(page) {
-    const url = `https://voodoo-sandbox.myshopify.com/products.json?limit=${productPerPage}&page=${page}`;
+    const url = `https://voodoo-sandbox.myshopify.com/products.json?`;
     const response = await fetch(url);
     const data = await response.json();
     return data.products
@@ -26,8 +41,6 @@ async function fetchProducts(page) {
 
 function displayProducts(products) {  
 
-    const allProducts = products.all_products;  
-    
     productListContainer.innerHTML = '';
     products.forEach(function(product){
 
@@ -71,7 +84,7 @@ async function loadInitialProducts(){
     const products = await fetchProducts();
     displayProducts(products);
  
-    // displayPaginaton(products);
+    displayPaginaton(products);
 }
 
 loadInitialProducts();

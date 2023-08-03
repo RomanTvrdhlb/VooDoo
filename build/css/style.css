@@ -753,10 +753,39 @@ fieldset {
   font-family: var(--font-family);
 }
 
-.main-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 24px 48px;
+.basket-menu {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+.basket-menu__top {
+  position: relative;
+}
+.basket-menu__top::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(var(--bg-a), 1);
+  height: 1px;
+}
+.basket-menu__bottom {
+  position: relative;
+}
+.basket-menu__bottom::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(var(--bg-a), 1);
+  height: 1px;
+}
+.basket-menu.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: initial;
+  visibility: visible;
 }
 
 .nav-list__link {

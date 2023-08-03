@@ -12,6 +12,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_accordions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/accordions */ "./source/js/components/accordions.js");
 /* harmony import */ var _components_getProductCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/getProductCard */ "./source/js/components/getProductCard.js");
 /* harmony import */ var _components_getProductCard__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_getProductCard__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_asideMenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/asideMenu */ "./source/js/components/asideMenu.js");
+/* harmony import */ var _components_asideMenu__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_asideMenu__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 
@@ -164,15 +167,57 @@ window.addEventListener('DOMContentLoaded', () => {
 
 /***/ }),
 
+/***/ "./source/js/components/asideMenu.js":
+/*!*******************************************!*\
+  !*** ./source/js/components/asideMenu.js ***!
+  \*******************************************/
+/***/ (function() {
+
+const asideMenu = document.querySelector('.basket-menu');
+const basketBtn = document.querySelector('.order-button');
+function showAsideMenu(btn, menu) {
+  btn.addEventListener('click', function (e) {
+    e.preventDefault();
+    menu.classList.add('active');
+  });
+}
+function hideAsideMenu(menu) {
+  const closeBtn = menu.querySelector('.close');
+  closeBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    menu.classList.remove('active');
+  });
+}
+if (asideMenu) {
+  showAsideMenu(basketBtn, asideMenu);
+  hideAsideMenu(asideMenu);
+}
+
+/***/ }),
+
 /***/ "./source/js/components/getProductCard.js":
 /*!************************************************!*\
   !*** ./source/js/components/getProductCard.js ***!
   \************************************************/
 /***/ (function() {
 
-const productPerPage = 24;
-let card = [];
 const productListContainer = document.querySelector('.main-list');
+const productPerPage = '24';
+
+// function displayPaginaton(allProducts,page) {
+
+//     const countPages = Math.ceil(allProducts / productPerPage);
+
+//     const navBtn = document.querySelector(".page-nav");
+//     let page = "";
+
+//     for (const i = 0; i < countPages; i++) {
+//     page += "<span class='page-nav__link'>" + (i + 1) + "</span>";
+//     }
+
+//     navBtn.innerHTML = page;
+// }
+
 async function fetchProducts(page) {
   const url = `https://voodoo-sandbox.myshopify.com/products.json?limit=${productPerPage}&page=${page}`;
   const response = await fetch(url);
@@ -180,6 +225,7 @@ async function fetchProducts(page) {
   return data.products;
 }
 function displayProducts(products) {
+  const allProducts = products.all_products;
   productListContainer.innerHTML = '';
   products.forEach(function (product) {
     const productCardWrapper = document.createElement('li');
@@ -212,7 +258,8 @@ function displayProducts(products) {
 async function loadInitialProducts() {
   const products = await fetchProducts();
   displayProducts(products);
-  // displayPaginaton();
+
+  // displayPaginaton(products);
 }
 
 loadInitialProducts();

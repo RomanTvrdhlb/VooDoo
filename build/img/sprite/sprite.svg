@@ -1,4 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>
+<clipPath id="clip0_2720_989">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+
+<clipPath id="clip0_2720_1016">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+
 <clipPath id="clip0_1_875">
 <rect width="82" height="82" fill="white"/>
 </clipPath>
@@ -14,6 +22,18 @@
 <g id="chevron-down">
 <path id="Vector" d="M6 9L12 15L18 9" stroke="#FCF7E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
+</symbol><symbol id="close" viewBox="0 0 24 24">
+<g clip-path="url(#clip0_2720_989)">
+<path d="M12 10.586L16.95 5.63599L18.364 7.04999L13.414 12L18.364 16.95L16.95 18.364L12 13.414L7.04999 18.364L5.63599 16.95L10.586 12L5.63599 7.04999L7.04999 5.63599L12 10.586Z" fill="#FCF7E6"/>
+</g>
+
+</symbol><symbol id="delete" viewBox="0 0 24 24">
+<g id="System-Line/delete-bin-6-line" clip-path="url(#clip0_2720_1016)">
+<g id="Group">
+<path id="Vector" d="M7 4V2H17V4H22V6H20V21C20 21.2652 19.8946 21.5196 19.7071 21.7071C19.5196 21.8946 19.2652 22 19 22H5C4.73478 22 4.48043 21.8946 4.29289 21.7071C4.10536 21.5196 4 21.2652 4 21V6H2V4H7ZM6 6V20H18V6H6ZM9 9H11V17H9V9ZM13 9H15V17H13V9Z" fill="#FCF7E6"/>
+</g>
+</g>
+
 </symbol><symbol id="logo-f" viewBox="0 0 82 82">
 <g clip-path="url(#clip0_1_875)">
 <path d="M41 82C18.3923 82 0 63.6077 0 41C0 18.3923 18.3923 0 41 0C63.6077 0 82 18.3923 82 41C82 63.6077 63.6077 82 41 82ZM41 5.92044C21.6574 5.92044 5.92044 21.6574 5.92044 41C5.92044 60.3426 21.6574 76.0796 41 76.0796C60.3426 76.0796 76.0796 60.3426 76.0796 41C76.0796 21.6574 60.3426 5.92044 41 5.92044Z" fill="black"/>

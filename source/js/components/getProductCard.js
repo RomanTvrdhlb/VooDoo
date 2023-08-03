@@ -1,6 +1,20 @@
-const productPerPage = 24;
-let card = [];
 const productListContainer = document.querySelector('.main-list');
+const productPerPage = '24';
+
+// function displayPaginaton(allProducts,page) {
+
+//     const countPages = Math.ceil(allProducts / productPerPage);
+
+//     const navBtn = document.querySelector(".page-nav");
+//     let page = "";
+
+//     for (const i = 0; i < countPages; i++) {
+//     page += "<span class='page-nav__link'>" + (i + 1) + "</span>";
+//     }
+
+//     navBtn.innerHTML = page;
+// }
+
 
 async function fetchProducts(page) {
     const url = `https://voodoo-sandbox.myshopify.com/products.json?limit=${productPerPage}&page=${page}`;
@@ -9,10 +23,15 @@ async function fetchProducts(page) {
     return data.products
 }
 
-function displayProducts(products) {
+
+function displayProducts(products) {  
+
+    const allProducts = products.all_products;  
     
     productListContainer.innerHTML = '';
     products.forEach(function(product){
+
+
         const productCardWrapper = document.createElement('li');
         productCardWrapper.className = ('main-list__item');
 
@@ -43,10 +62,16 @@ function displayProducts(products) {
     })
 }
 
+
+
+
+
+
 async function loadInitialProducts(){
     const products = await fetchProducts();
     displayProducts(products);
-    // displayPaginaton();
+ 
+    // displayPaginaton(products);
 }
 
 loadInitialProducts();

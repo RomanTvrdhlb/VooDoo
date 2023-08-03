@@ -11,23 +11,31 @@
       <div class="container">
         <div class="main-section__box flex flex-col gap-16">
             <div class='main-section__inner flex flex-col gap-12'>
-              <div class="main-top p-6 rounded flex items-center gap-12">
-                <span class="main-top__title text-base font-bold text-center flex items-center gap-2">
-                  <svg width='24' height='24'>
-                    <use href='img/sprite/sprite.svg#alert'></use>
-                  </svg>
-                  ALPHA
-                </span>
-                <p class="main-top__deskr text-sm font-medium flex-1">Important info regarding our service</p>
-                <button class='main-top__btn flex items-center justify-center ' data-id='1'>
-                    <svg width='24' height='24'>
-                      <use href='img/sprite/sprite.svg#arrow'></use>
-                     </svg>
-                 </button>
-              </div>
+                <div class='accordion' data-single='true' data-breakpoint='576' data-accordion-init>
+                  <div class='accordion__item'>
+                    <div class="main-top p-6 rounded flex items-center gap-12">
+                      <span class="main-top__title text-base font-bold text-center flex items-center gap-2">
+                        <svg width='24' height='24'>
+                          <use href='img/sprite/sprite.svg#alert'></use>
+                        </svg>
+                        ALPHA
+                      </span>
+                      <p class="main-top__deskr text-sm font-medium flex-1">Important info regarding our service</p>
+                      <button class='main-top__btn flex items-center justify-center focus:outline-none' data-id='1'>
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#arrow'></use>
+                           </svg>
+                       </button>
+                    </div>
+                    <div class='accordion__content' data-content='1'>
+                      <p class="text-base font-medium pt-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    </div>
+                  </div>
+                </div>
+            
           
               <div class='main-section__inner'>
-                <ul class="main-list">
+                <ul class="main-list grid gap-x-12 gap-y-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                   <li class="main-list__item">
                     <div class="main-card">
                      

@@ -11,12 +11,47 @@
             })
             
 
-           <button class="order-button my-2 h-6 flex-1 justify-end">
+           <button class="order-button my-2 h-6 flex-1 justify-end focus:outline-none">
             <svg width='24' height='24'>
               <use href='img/sprite/sprite.svg#order'></use>
             </svg>
            </button>
            <button class="p-3 h-10 flex justify-center items-center rounded text-xl font-bold text-white bg-black h-fit">Sign-up</button>
+      </div>
+
+      <div class="basket-menu bg-black w-full max-w-md py-12 pl-8 pr-10 fixed top-0 right-0 h-full z-50 transition-all delay-200 ease-in invisible opacity-0">
+        <div class="basket-menu__top flex items-center justify-between pb-6">
+          <h4 class="text-white text-2xl font-bold">Shopping Cart</h4>
+          <button class="close focus:outline-none">
+            <svg width='24' height='24'>
+              <use href='img/sprite/sprite.svg#close'></use>
+            </svg>
+          </button>
+        </div>
+
+        <ul class="basket-menu__list pb-8 pt-12 flex flex-col gap-10">
+          <li class="basket-menu__item">
+            <button class="basket-menu__delete">
+              <svg width='24' height='24'>
+                <use href='img/sprite/sprite.svg#delete'></use>
+              </svg>
+            </button>
+          </li>
+          <li class="basket-menu__item">
+            <button class="basket-menu__delete">
+              <svg width='24' height='24'>
+                <use href='img/sprite/sprite.svg#delete'></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
+
+
+        <div class="basket-menu__bottom flex items-center justify-between pt-10">
+          <span class="text-white text-sm font-bold">TOTAL</span>
+          <span class="text-white text-sm font-bold">123</span>
+        </div>
+       
       </div>
     </div>
 </header>

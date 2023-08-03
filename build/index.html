@@ -6,30 +6,30 @@
     <meta name="Description" content="default">
     <link rel="shortcut icon" href="img/sprite/fav.svg" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>NFS</title>
+    <title>VooDoo</title>
 
     <link rel="preload" href="fonts/SpaceGrotesk-Regular.woff" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/SpaceGrotesk-Medium.woff" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/SpaceGrotesk-Bold.woff" as="font" crossorigin="anonymous">
-
     <link rel="preload" href="fonts/Inter-Light.woff" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/Inter-Bold.woff" as="font" crossorigin="anonymous">
-
     <link rel="preload" href="fonts/SpaceMono-Bold.woff" as="font" crossorigin="anonymous">
-
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+
+   
 </head>
 
 
 <body>
-  <header class="header fixed-block">
+  <header class="header mb-24 py-12">
 
     <div class="container container--mode">
-      <div class="header-box">
+      <div class="header-box gap-12 content-start flex">
             
 
 
-<a href="index.html" class="header-logo header__logo">
+<a href="index.html" class="header__logo ">
   <svg width='249' height='97'>
     <use href='img/sprite/sprite.svg#logo'></use>
   </svg>
@@ -37,12 +37,12 @@
 
             
 
-           <button class="order-button">
+           <button class="order-button my-2 h-6 flex-1 justify-end">
             <svg width='24' height='24'>
               <use href='img/sprite/sprite.svg#order'></use>
             </svg>
            </button>
-           <button class="sign-button">Sign-up</button>
+           <button class="p-3 h-10 flex justify-center items-center rounded text-xl font-bold text-white bg-black h-fit">Sign-up</button>
       </div>
     </div>
 </header>
@@ -50,19 +50,19 @@
 
   <main>
 
-    <section class="main-section">
+    <section class="main-section mb-56">
       <div class="container">
-        <div class="main-section__box">
-            <div class='main-section__inner'>
-              <div class="main-top">
-                <span class="main-top__title">
+        <div class="main-section__box flex flex-col gap-16">
+            <div class='main-section__inner flex flex-col gap-12'>
+              <div class="main-top p-6 rounded flex items-center gap-12">
+                <span class="main-top__title text-base font-bold text-center flex items-center gap-2">
                   <svg width='24' height='24'>
                     <use href='img/sprite/sprite.svg#alert'></use>
                   </svg>
                   ALPHA
                 </span>
-                <p class="main-top__deskr">Important info regarding our service</p>
-                <button class='main-top__btn' data-id='1'>
+                <p class="main-top__deskr text-sm font-medium flex-1">Important info regarding our service</p>
+                <button class='main-top__btn flex items-center justify-center ' data-id='1'>
                     <svg width='24' height='24'>
                       <use href='img/sprite/sprite.svg#arrow'></use>
                      </svg>
@@ -113,54 +113,54 @@
   <footer>
   <div class="container">
 
-    <div class="footer">
+    <div class="footer grid grid-cols-4 gap-6">
       
       
-          <a href="#" class="footer__logo">
+          <a href="#" class="footer__logo p-2 justify-self-center">
             <svg width='82' height='82'>
               <use href='img/sprite/sprite.svg#logo-f'></use>
             </svg>
           </a>
 
-          <ul class="nav-list">
+          <ul class="nav-list flex flex-col gap-5">
             <li class="nav-list__item">
-              <a href="#" class="nav-list__link">FAQ</a>
+              <a href="#" class="text-sm font-bold text-[#1e1e1e] not-italic">FAQ</a>
             </li>
             <li class="nav-list__item">
-              <a href="#" class="nav-list__link">RETURNS</a>
+              <a href="#" class="text-sm font-bold text-[#1e1e1e] not-italic">RETURNS</a>
             </li>
             <li class="nav-list__item">
-              <a href="#" class="nav-list__link">CONTACT</a>
-            </li>
-          </ul>
-
-          <ul class="nav-list">
-            <li class="nav-list__item">
-              <a href="#" class="nav-list__link">TERMS & CONDITIONS</a>
-            </li>
-            <li class="nav-list__item">
-              <a href="#" class="nav-list__link">PRIVACY POLICY</a>
-            </li>
-            <li class="nav-list__item">
-              <a href="#" class="nav-list__link">COOKIE POLICY</a>
-            </li>
-            <li class="nav-list__item">
-              <a href="#" class="nav-list__link">COOKIE SETTINGS</a>
+              <a href="#" class="text-sm font-bold text-[#1e1e1e] not-italic">CONTACT</a>
             </li>
           </ul>
 
-          <ul class="nav-list">
+          <ul class="nav-list flex flex-col gap-5">
             <li class="nav-list__item">
-              <a href="#" class="nav-list__link">ABOUT SECOND CHANCE</a>
+              <a href="#" class="text-sm font-bold text-[#1e1e1e] not-italic">TERMS & CONDITIONS</a>
             </li>
             <li class="nav-list__item">
-              <a href="#" class="nav-list__link">CAREER</a>
+              <a href="#" class="text-sm font-bold text-[#1e1e1e] not-italic">PRIVACY POLICY</a>
             </li>
             <li class="nav-list__item">
-              <a href="#" class="nav-list__link">FACEBOOK</a>
+              <a href="#" class="text-sm font-bold text-[#1e1e1e] not-italic">COOKIE POLICY</a>
             </li>
             <li class="nav-list__item">
-              <a href="#" class="nav-list__link">INSTAGRAM</a>
+              <a href="#" class="text-sm font-bold text-[#1e1e1e] not-italic">COOKIE SETTINGS</a>
+            </li>
+          </ul>
+
+          <ul class="nav-list flex flex-col gap-5">
+            <li class="nav-list__item">
+              <a href="#" class="text-sm font-bold text-[#1e1e1e] not-italic">ABOUT SECOND CHANCE</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#" class="text-sm font-bold text-[#1e1e1e] not-italic">CAREER</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#" class="text-sm font-bold text-[#1e1e1e] not-italic">FACEBOOK</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#" class="text-sm font-bold text-[#1e1e1e] not-italic">INSTAGRAM</a>
             </li>
           </ul>
      

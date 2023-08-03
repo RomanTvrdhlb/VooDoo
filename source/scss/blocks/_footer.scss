@@ -1,5 +1,4 @@
 footer {
-  background-color: transparent;
   padding: clamp(50px, 6.604vw, 84px) 0;
   position: relative;
 
@@ -14,17 +13,3 @@ footer {
   }
 }
 
-.footer {
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  grid-gap: 23px;
-
-
-
-
-
-  &__logo {
-   padding: 8px 0;
-   justify-self: center;
-  }
-}

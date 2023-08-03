@@ -2,7 +2,6 @@ const productPerPage = 24;
 let card = [];
 const productListContainer = document.querySelector('.main-list');
 
-
 async function fetchProducts(page) {
     const url = `https://voodoo-sandbox.myshopify.com/products.json?limit=${productPerPage}&page=${page}`;
     const response = await fetch(url);
@@ -18,26 +17,25 @@ function displayProducts(products) {
         productCardWrapper.className = ('main-list__item');
 
         const productCard = document.createElement('div');
-        productCard.className = ('main-card');
+        productCard.className = ('main-card flex flex-col gap-3 h-full');
         productCard.innerHTML = `
-            <div class='main-card__top'>
-                <div class='main-card__id'>${product.id}</div>
-                <div class='main-card__image'>${product.featured_image}</div>
-
+            <div class='main-card__top p-3 rounded border border-black border-solid'>
+                <div class='w-12 p-2 bg-black text-xs rounded text-white font-normal'>${product.values}</div>
             </div>
 
-            <ul class='main-card__list'>
-                <li class='main-card__item'>
-                    <h2 class='main-card__title'>'Product name ${product.title}'</h2>
-                    <span class='main-card__price'>${product.price}</span> 
+            <ul class='flex justify-between gap-2 h-full'>
+                <li class='flex-col flex'>
+                    <h2 class='text-black text-sm font-bold'>Product name: ${product.title}</h2>
+
+                    <span class='text-black text-sm font-bold'>${product.price}</span> 
                 </li>
-                <li class='main-card__item'>
-                    <span class='main-card__name main-card__name--mode'>Condition</span>
-                    <span class='main-card__name'>${product.aviable}</span>
+                <li class='flex-col flex items-end'>
+                    <span class='text-black text-sm font-medium'>Condition</span>
+                    <span class='text-black text-sm font-normal'>${product.position}</span>
                 </li>
             </ul>
           
-            <button class='main-button'>ADD TO CARD</button>
+            <button class='main-button font-bold text-sm text-white gap-2.5 p-4 w-full rounded flex items-center justify-center'>ADD TO CARD</button>
             `;
 
             productCardWrapper.appendChild(productCard);

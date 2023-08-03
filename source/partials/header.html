@@ -1,9 +1,9 @@
-<header class="header fixed-block">
+<header class="header mb-24 py-12">
 
     <div class="container container--mode">
-      <div class="header-box">
+      <div class="header-box gap-12 content-start flex">
             @include('../partials/components/header-logo.html',{
-              'ClassName':'header__logo',
+              'ClassName':'',
               'Link':'index.html',
               'IconName':'logo',
               'IconWidth':'249',
@@ -11,12 +11,12 @@
             })
             
 
-           <button class="order-button">
+           <button class="order-button my-2 h-6 flex-1 justify-end">
             <svg width='24' height='24'>
               <use href='img/sprite/sprite.svg#order'></use>
             </svg>
            </button>
-           <button class="sign-button">Sign-up</button>
+           <button class="p-3 h-10 flex justify-center items-center rounded text-xl font-bold text-white bg-black h-fit">Sign-up</button>
       </div>
     </div>
 </header>

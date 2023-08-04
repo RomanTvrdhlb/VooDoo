@@ -21,7 +21,7 @@
   }
 
 // --------------- default scroll variable ---------------
-  --scrollbar-thumb: #1E47B0;
+  --scrollbar-thumb: #5a5852;
   --scrollbar-thumb-hover: #1d43a2;
   --scrollbar-track:  #000000;
   --scrollbar-track-hover: #000000;
@@ -34,7 +34,7 @@
 // --------------- default text color variable ---------------
   --cl-a: #{HexToRGB(#ffffff)}; // rgba(var(--cl-a),1.0);
   --cl-b: #{HexToRGB(#000000)}; // rgba(var(--cl-b),1.0);
-  --cl-c: #{HexToRGB(#1E1E1E)}; // rgba(var(--cl-c),1.0);
+  --cl-c: #{HexToRGB(#1e1e1e)}; // rgba(var(--cl-c),1.0);
   --cl-d: #{HexToRGB(#FCF7E6)}; // rgba(var(--cl-d),1.0);
 
   --cl-e: #{HexToRGB(#333333)}; // rgba(var(--cl-e),1.0);

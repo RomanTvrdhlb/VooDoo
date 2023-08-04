@@ -7,20 +7,21 @@
 
   <main>
 
-    <section class="main-section mb-56">
+    <section class="main-section mb-48 md:mb-56">
       <div class="container">
         <div class="main-section__box flex flex-col gap-16">
             <div class='main-section__inner flex flex-col gap-12'>
                 <div class='accordion' data-single='true' data-breakpoint='576' data-accordion-init>
                   <div class='accordion__item'>
-                    <div class="main-top p-6 rounded flex items-center gap-12">
+                    <div class="main-top p-6 rounded flex items-center gap-6 md:gap-12">
                       <span class="main-top__title text-base font-bold text-center flex items-center gap-2">
                         <svg width='24' height='24'>
                           <use href='img/sprite/sprite.svg#alert'></use>
                         </svg>
                         ALPHA
                       </span>
-                      <p class="main-top__deskr text-sm font-medium flex-1">Important info regarding our service</p>
+                      <p class="main-top__deskr text-sm font-medium flex-1 hidden sm:flex">Important info regarding our service</p>
+                      <span class="main-top__deskr text-sm font-medium flex-1 sm:hidden">Important info</span>
                       <button class='main-top__btn flex items-center justify-center focus:outline-none' data-id='1'>
                           <svg width='24' height='24'>
                             <use href='img/sprite/sprite.svg#arrow'></use>

@@ -34,4 +34,47 @@
         opacity: initial;
         visibility: visible;
     }
+
+    &__image{
+      width: 74px;
+      height: 74px;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.50);
+      flex-shrink: 0;
+    }
+
+    &__inner{
+      min-height: 122px;
+      font-family: var(--font-family);
+      font-size: 16px;
+      font-weight: 700;
+      color: rgba(var(--cl-d),1.0);
+      
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 2rem;
+    }
+
+    &__product{
+      *{
+        color: rgba(var(--cl-d),1.0);
+        font-family: var(--font-family);
+        font-size: 14px;
+        font-weight: 700;
+      }
+    }
+
+    &__info{
+      flex-grow: 1;
+    }
+
+    &__delete{
+      flex-shrink: 0;
+      background-image: url(/img/sprite/delete.svg);
+      width: 24px;
+      height: 24px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
 }
